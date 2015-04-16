@@ -8,7 +8,7 @@ The mod can be downloaded at http://minecraft.curseforge.com/mc-mods/229609-abys
 
 ### Licensing
 
-This mod is licensed as "All Rights Reserved", but the code can still be freely used in any way, as long as you rename everything and make it not look like I code in this repository (or something similar to those circumstances).
+This mod is licensed as "All Rights Reserved", but the code can still be freely used in any way, as long as you rename everything and make it not look like the code in this repository (or something similar to those circumstances).
 
 ### Compiling and running
 
