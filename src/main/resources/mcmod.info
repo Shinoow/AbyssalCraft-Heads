@@ -1,0 +1,25 @@
+{
+  	"modListVersion": 2,
+  	"modList": [
+  			{
+  				"modid": "acheads",
+  				"name": "AbyssalCraft Heads",
+  				"description": "A simple mod that adds head icons (items) for AbyssalCraft entities (except the Depths Ghoul).",
+  				"mcversion": "${mcversion}",
+  				"version": "${version}",
+  				"authorList": [
+  						"shinoow"
+  				],
+  				"credits": "shinoow (coding)",
+  				"dependants": [  ],
+				"dependencies": [ "abyssalcraft" ],
+				"parent": "",
+				"requiredMods": [  ],
+				"logoFile": "assets/acheads/textures/logo.png",
+				"screenshots": [  ],
+				"updateUrl": "",
+  				"url": "",
+ 				"useDependencyInformation": true
+			}
+	]
+}
