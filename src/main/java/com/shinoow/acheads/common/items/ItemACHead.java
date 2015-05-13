@@ -18,7 +18,8 @@ public class ItemACHead extends Item {
 		"dreadling", "dreadspawn", "demonpig", "chagaroth", "chagarothfist", "shadowbeast", "sacthoth", "skeletongoliath",
 		"chagarothspawn", "antiabyssalzombie", "antibat", "antichicken", "anticow", "anticreeper", "antighoul", "antipig",
 		"antiplayer", "antiskeleton", "antispider", "antizombie", "omotholghoul", "remnant", "remnantbanker",
-		"remnantblacksmith", "remnantbutcher", "remnantlibrarian", "remnantmasterblacksmith", "remnantpriest"};
+		"remnantblacksmith", "remnantbutcher", "remnantlibrarian", "remnantmasterblacksmith", "remnantpriest",
+		"jzaharminion"};
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;

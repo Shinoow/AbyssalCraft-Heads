@@ -15,7 +15,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod(modid = AbyssalCraftHeads.modid, name = AbyssalCraftHeads.name, version = AbyssalCraftHeads.version, dependencies = "required-after:Forge@[forgeversion,);required-after:abyssalcraft", useMetadata = false)
 public class AbyssalCraftHeads {
 
-	public static final String version = "1.0.0";
+	public static final String version = "1.1.0";
 	public static final String modid = "acheads";
 	public static final String name = "AbyssalCraft Heads";
 
