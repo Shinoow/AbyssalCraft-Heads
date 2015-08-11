@@ -1,5 +1,5 @@
 #Creative Tab
-itemgroup.acheads=AbyssalCraft Heads
+itemGroup.acheads=AbyssalCraft Heads
 
 #Items
 item.head.evilpig.name=Evil Pig
@@ -42,3 +42,8 @@ item.head.remnantlibrarian.name=Remnant Librarian
 item.head.remnantmasterblacksmith.name=Remnant Master Blacksmith
 item.head.remnantpriest.name=Remnant Priest
 item.head.jzaharminion.name=Minion of The Gatekeeper
+item.head.lessershoggoth.name=Lesser Shoggoth
+item.head.abyssalshoggoth.name=Lesser Abyssal Shoggoth
+item.head.dreadedshoggoth.name=Lesser Dreaded Shoggoth
+item.head.omotholshoggoth.name=Lesser Omothol Shoggoth
+item.head.shadowshoggoth.name=Lesser Shadow Shoggoth
