@@ -1,10 +1,18 @@
 package com.shinoow.acheads;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+import org.apache.logging.log4j.Level;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 import com.shinoow.acheads.common.items.ItemACHead;
 
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.*;
 import cpw.mods.fml.common.ModMetadata;
@@ -22,7 +30,7 @@ public class AbyssalCraftHeads {
 	public static ModMetadata metadata;
 
 	@Instance(AbyssalCraftHeads.modid)
-	public static AbyssalCraftHeads intstance = new AbyssalCraftHeads();
+	public static AbyssalCraftHeads instance = new AbyssalCraftHeads();
 
 	public static Item head;
 
@@ -39,6 +47,9 @@ public class AbyssalCraftHeads {
 	public void preInit(FMLPreInitializationEvent event) {
 
 		metadata = event.getModMetadata();
+		metadata.description = metadata.description +"\n\n\u00a76Supporters: "+getSupporterList()+"\u00a7r";
+
+		instance = this;
 
 		head = new ItemACHead();
 
@@ -50,4 +61,21 @@ public class AbyssalCraftHeads {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {}
+
+	private String getSupporterList(){
+		BufferedReader nameFile;
+		String names = "";
+		try {
+			nameFile = new BufferedReader(new InputStreamReader(new URL("https://raw.githubusercontent.com/Shinoow/AbyssalCraft/master/supporters.txt").openStream()));
+
+			names = nameFile.readLine();
+			nameFile.close();
+
+		} catch (IOException e) {
+			FMLLog.log("AbyssalCraft Heads", Level.ERROR, "Failed to fetch supporter list, using local version!");
+			names = "Enfalas";
+		}
+
+		return names;
+	}
 }

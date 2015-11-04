@@ -15,7 +15,9 @@ buildscript {
     }
 }
 
+apply plugin: 'java'
 apply plugin: 'forge'
+apply plugin: 'curseforge'
 
 ext.propFile = file "build.properties"
 
@@ -94,4 +96,15 @@ processResources
 }
 	artifacts {
     archives srcJar, devJar
+}
+
+curse {
+    apiKey = project.hasProperty('curseForgeApiKey') ? project.curseForgeApiKey : '' // gradle curse -Pcurseforge_key=your-api-key
+    projectId   = "229609" // http://minecraft.curseforge.com/mc-mods/"xxxxxx"-projectname
+    releaseType = project.props.release_type //alpha beta release
+    changelog   = new File('changelog.txt').text //must have at least an empty string
+	
+	additionalArtifact devJar, srcJar
+	
+	relatedProject 'abyssalcraft'
 }
