@@ -1,0 +1,6 @@
+{
+	"parent": "acheads:item/head",
+	"textures": {
+		"layer0": "acheads:items/head_dreadguard"
+	}
+}

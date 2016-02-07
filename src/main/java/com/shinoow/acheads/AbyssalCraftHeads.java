@@ -5,24 +5,34 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import org.apache.logging.log4j.Level;
-
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.resources.model.ModelBakery;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.FMLLog;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.Mod.Metadata;
+import net.minecraftforge.fml.common.ModMetadata;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import org.apache.logging.log4j.Level;
 
 import com.shinoow.acheads.common.items.ItemACHead;
 
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.*;
-import cpw.mods.fml.common.ModMetadata;
-import cpw.mods.fml.common.event.*;
-import cpw.mods.fml.common.registry.GameRegistry;
-
-@Mod(modid = AbyssalCraftHeads.modid, name = AbyssalCraftHeads.name, version = AbyssalCraftHeads.version, dependencies = "required-after:Forge@[forgeversion,);required-after:abyssalcraft", useMetadata = false)
+@Mod(modid = AbyssalCraftHeads.modid, name = AbyssalCraftHeads.name, version = AbyssalCraftHeads.version, dependencies = "required-after:Forge@[forgeversion,);required-after:abyssalcraft", useMetadata = false,
+updateJSON = "https://raw.githubusercontent.com/Shinoow/AbyssalCraft-Heads/master/version.json")
 public class AbyssalCraftHeads {
 
-	public static final String version = "1.2.0";
+	public static final String version = "1.3.0";
 	public static final String modid = "acheads";
 	public static final String name = "AbyssalCraft Heads";
 
@@ -54,10 +64,24 @@ public class AbyssalCraftHeads {
 		head = new ItemACHead();
 
 		GameRegistry.registerItem(head, "head");
+
+		if(FMLCommonHandler.instance().getEffectiveSide().isClient()){
+			ResourceLocation[] res = new ResourceLocation[ItemACHead.names.length];
+			for(int i = 0; i < ItemACHead.names.length; i++)
+				res[i] = new ResourceLocation("acheads", "head_" + ItemACHead.names[i]);
+			ModelBakery.registerItemVariants(head, res);
+		}
 	}
 
 	@EventHandler
-	public void Init(FMLInitializationEvent event) {}
+	public void Init(FMLInitializationEvent event) {
+		if(FMLCommonHandler.instance().getEffectiveSide().isClient()){
+			RenderItem render = Minecraft.getMinecraft().getRenderItem();
+			for(int i = 0; i < ItemACHead.names.length; i++){
+				render.getItemModelMesher().register(head, i, new ModelResourceLocation("acheads:head_" + ItemACHead.names[i], "inventory"));
+			}
+		}
+	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {}
@@ -73,7 +97,7 @@ public class AbyssalCraftHeads {
 
 		} catch (IOException e) {
 			FMLLog.log("AbyssalCraft Heads", Level.ERROR, "Failed to fetch supporter list, using local version!");
-			names = "Enfalas";
+			names = "Enfalas, Saice Shoop";
 		}
 
 		return names;

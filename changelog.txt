@@ -1,5 +1,0 @@
-- Added Evil Cow head
-- Added Evil Chicken head
-- Added Demon Cow head
-- Added Demon Chicken head
-- Redid the J'zahar texture to reflect on the new model
