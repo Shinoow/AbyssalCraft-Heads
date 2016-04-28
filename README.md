@@ -10,6 +10,10 @@ The mod can be downloaded at http://minecraft.curseforge.com/mc-mods/229609-abys
 
 This mod is licensed as "All Rights Reserved", but the code can still be freely used in any way, as long as you rename everything and make it not look like the code in this repository (or something similar to those circumstances).
 
+###Support Development
+
+[![](https://s3.amazonaws.com/patreon_public_assets/kaGh5_patreon_name_and_message.png)](https://www.patreon.com/Shinoow)
+
 ### Compiling and running
 
 Eventhough this mod is entirely independant from AbyssalCraft, it still has it as a hard dependency, so if you want to run this mod inside a dev environment, you'd need to either remove AbyssalCraft from the dependency list in the @Mod annotation, or include a compiled version of AbyssalCraft from https://github.com/Shinoow/AbyssalCraft/tree/dev/jars/dev
