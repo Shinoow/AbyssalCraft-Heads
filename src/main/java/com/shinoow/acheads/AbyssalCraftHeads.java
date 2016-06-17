@@ -63,7 +63,7 @@ public class AbyssalCraftHeads {
 
 		head = new ItemACHead();
 
-		GameRegistry.registerItem(head, "head");
+		GameRegistry.register(head.setRegistryName(new ResourceLocation(modid, "head")));
 
 		if(FMLCommonHandler.instance().getEffectiveSide().isClient()){
 			ResourceLocation[] res = new ResourceLocation[ItemACHead.names.length];
