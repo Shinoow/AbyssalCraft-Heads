@@ -1,12 +1,14 @@
 package com.shinoow.acheads.common.items;
 
+import java.util.List;
+
 import com.shinoow.acheads.AbyssalCraftHeads;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -37,9 +39,9 @@ public class ItemACHead extends ItemBlock {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubItems(CreativeTabs par2CreativeTab, NonNullList<ItemStack> par3List){
+	public void getSubItems(Item par1Item, CreativeTabs par2CreativeTab, List par3List){
 		for(int i = 0; i < names.length; ++i)
-			par3List.add(new ItemStack(this, 1, i));
+			par3List.add(new ItemStack(par1Item, 1, i));
 	}
 
 	@Override
