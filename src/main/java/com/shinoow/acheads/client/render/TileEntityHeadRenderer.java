@@ -322,7 +322,7 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 	}
 
 	@Override
-	public void renderTileEntityAt(TileEntityHead te, double x, double y, double z, float partialTicks, int destroyStage)
+	public void render(TileEntityHead te, double x, double y, double z, float partialTicks, int destroyStage, float alpha)
 	{
 		IRenderHandler handler = handlers.get(te.getType());
 
