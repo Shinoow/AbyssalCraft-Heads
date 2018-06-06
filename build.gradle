@@ -69,6 +69,8 @@ dependencies {
 	deobfCompile "com.shinoow.abyssalcraft:AbyssalCraft:1.11.2-1.9.4.9"
 }
 
+version = "${props.mc_version}-${props.ach_version}"
+
 processResources
 {
 	// I really don't want that file to exist anywhere
