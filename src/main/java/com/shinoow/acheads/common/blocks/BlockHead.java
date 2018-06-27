@@ -22,7 +22,7 @@ import net.minecraft.world.World;
 
 public class BlockHead extends Block {
 
-	public static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 50);
+	public static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 51);
 
 	public BlockHead() {
 		super(Material.CLOTH);
@@ -159,6 +159,8 @@ public class BlockHead extends Block {
 				return new AxisAlignedBB(0.25F, 0.0F, 0.25F, 0.75F, 0.5F, 0.75F);
 			case 50:
 				return new AxisAlignedBB(0.12F, 0.0F, 0.12F, 0.88F, 1.0F, 0.88F);
+			case 51:
+				return new AxisAlignedBB(0.25F, 0.0F, 0.25F, 0.75F, 0.55F, 0.75F);
 			}
 		return new AxisAlignedBB(0.1F, 0.0F, 0.1F, 0.8F, 0.7F, 0.8F);
 	}
