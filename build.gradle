@@ -60,7 +60,7 @@ minecraft {
 	
 	replaceIn "AbyssalCraftHeads.java"
         replace "forgeversion", props.forge_version
-		replace "ac_version", props.ach_version
+		replace "ach_version", props.ach_version
 		replace "cert_fingerprint", project.findProperty('signSHA1')
 }
 

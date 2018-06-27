@@ -20,7 +20,7 @@ public class ItemACHead extends ItemBlock {
 			"antiplayer", "antiskeleton", "antispider", "antizombie", "omotholghoul", "remnant", "remnantbanker",
 			"remnantblacksmith", "remnantbutcher", "remnantlibrarian", "remnantmasterblacksmith", "remnantpriest",
 			"jzaharminion", "lessershoggoth", "abyssalshoggoth", "dreadedshoggoth", "omotholshoggoth", "shadowshoggoth",
-			"evilcow", "evilchicken", "demoncow", "demonchicken", "evilsheep", "demonsheep", "coraliumsquid"};
+			"evilcow", "evilchicken", "demoncow", "demonchicken", "evilsheep", "demonsheep", "coraliumsquid", "chagarothfistleft"};
 
 	public ItemACHead(Block block){
 		super(block);
@@ -38,8 +38,9 @@ public class ItemACHead extends ItemBlock {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(CreativeTabs par2CreativeTab, NonNullList<ItemStack> par3List){
-		for(int i = 0; i < names.length; ++i)
-			par3List.add(new ItemStack(this, 1, i));
+		if(isInCreativeTab(par2CreativeTab))
+			for(int i = 0; i < names.length; ++i)
+				par3List.add(new ItemStack(this, 1, i));
 	}
 
 	@Override
