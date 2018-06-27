@@ -319,6 +319,11 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 			GlStateManager.rotate(rotation * 90, 0, 1, 0);
 			MODEL_SQUID.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
 		});
+		handlers.add((rotation, x, y, z, partialTicks, destroyStage) -> {
+			bindTexture(FIST_OF_CHAGAROTH);
+			GlStateManager.rotate(rotation * 90, 0, 1, 0);
+			MODEL_CHAGAROTH_FIST_LEFT.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+		});
 	}
 
 	@Override
@@ -415,6 +420,7 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 	private ModelLesserShoggothHead MODEL_LESSER_SHOGGOTH = new ModelLesserShoggothHead();
 	private ModelSheepHead MODEL_SHEEP = new ModelSheepHead();
 	private ModelSquidHead MODEL_SQUID = new ModelSquidHead();
+	private ModelChagarothFistHandLeft MODEL_CHAGAROTH_FIST_LEFT = new ModelChagarothFistHandLeft();
 
 	private interface IRenderHandler {
 

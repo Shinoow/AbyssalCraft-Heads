@@ -60,7 +60,7 @@ minecraft {
 	
 	replaceIn "AbyssalCraftHeads.java"
         replace "forgeversion", props.forge_version
-		replace "ac_version", props.ach_version
+		replace "ach_version", props.ach_version
 		replace "cert_fingerprint", project.findProperty('signSHA1')
 }
 
@@ -68,6 +68,8 @@ dependencies {
 
 	deobfCompile "com.shinoow.abyssalcraft:AbyssalCraft:1.10.2-1.9.4.9"
 }
+
+version = "${props.mc_version}-${props.ach_version}"
 
 processResources
 {
