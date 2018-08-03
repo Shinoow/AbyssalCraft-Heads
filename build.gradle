@@ -66,7 +66,7 @@ minecraft {
 
 dependencies {
 
-	deobfCompile "com.shinoow.abyssalcraft:AbyssalCraft:1.11.2-1.9.4.9"
+	deobfCompile "com.shinoow.abyssalcraft:AbyssalCraft:1.11.2-1.9.4.11-FINAL"
 }
 
 version = "${props.mc_version}-${props.ach_version}"
