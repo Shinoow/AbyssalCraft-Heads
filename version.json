@@ -1,12 +1,12 @@
 {
   "homepage": "http://minecraft.curseforge.com/mc-mods/229609",
   "promos": {
-	"1.12.2-latest": "2.0.3",
-	"1.12.2-recommended": "2.0.3",
-	"1.11.2-latest": "2.0.1",
-	"1.11.2-recommended": "2.0.1",
-	"1.10.2-latest": "2.0.2",
-	"1.10.2-recommended": "2.0.2",
+	"1.12.2-latest": "2.0.4",
+	"1.12.2-recommended": "2.0.4",
+	"1.11.2-latest": "2.0.4",
+	"1.11.2-recommended": "2.0.4",
+	"1.10.2-latest": "2.0.4",
+	"1.10.2-recommended": "2.0.4",
 	"1.9.4-latest": "1.3.0",
 	"1.9.4-recommended": "1.3.0",
 	"1.9-latest": "1.3.0",
@@ -15,16 +15,19 @@
     "1.8.9-recommended": "1.3.0"
   },
   "1.12.2": {
+	"2.0.4": "- Bosses, Coralium Infested Squids and Remnants now drop their respective heads\n- Bump to AbyssalCraft 1.9.4.11",
 	"2.0.3": "- Actually applied the fix for the startup crashes with Thaumcraft",
 	"2.0.2": "- No longer causes startup crashes when loaded alongside Thaumcraft",
 	"2.0.1": "- Mobs now drop their respective heads (apart from the bosses and Coralium Infested Squids, who all lack loot tables)\n- Added a left-handed Fist of Cha'garoth\n- Compressed the texture files\n- The heads now work as Thaumcraft infusion stabilizers\n- The heads no longer show up in all creative tabs",
 	"2.0.0": "- Added Evil Sheep Head\n- Added Demon Sheep Head\n- Added Coralium Infested Squid Head\n- Removed the End Abyssal Zombie Head\n- All heads are now placeable blocks"
   },
   "1.11.2": {
+	"2.0.4": "- Bosses, Coralium Infested Squids and Remnants now drop their respective heads\n- Bump to AbyssalCraft 1.9.4.11",
 	"2.0.1": "- Mobs now drop their respective heads (apart from the bosses and Coralium Infested Squids, who all lack loot tables)\n- Added a left-handed Fist of Cha'garoth\n- Compressed the texture files",
 	"2.0.0": "- Added Evil Sheep Head\n- Added Demon Sheep Head\n- Added Coralium Infested Squid Head\n- Removed the End Abyssal Zombie Head\n- All heads are now placeable blocks"
   },
   "1.10.2": {
+	"2.0.4": "- Bosses, Coralium Infested Squids and Remnants now drop their respective heads\n- Bump to AbyssalCraft 1.9.4.11",
 	"2.0.2": "- No longer causes startup crashes when loaded alongside Thaumcraft",
 	"2.0.1": "- Mobs now drop their respective heads (apart from the bosses and Coralium Infested Squids, who all lack loot tables)\n- Added a left-handed Fist of Cha'garoth\n- Compressed the texture files\n- The heads now work as Thaumcraft infusion stabilizers",
 	"2.0.0": "- Added Evil Sheep Head\n- Added Demon Sheep Head\n- Added Coralium Infested Squid Head\n- Removed the End Abyssal Zombie Head\n- All heads are now placeable blocks"
