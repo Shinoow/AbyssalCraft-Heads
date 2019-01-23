@@ -46,7 +46,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@Mod(modid = AbyssalCraftHeads.modid, name = AbyssalCraftHeads.name, version = AbyssalCraftHeads.version, dependencies = "required-after:forge@[forgeversion,);required-after:abyssalcraft@[1.9.4.11,];after:thaumcraft", useMetadata = false,
+@Mod(modid = AbyssalCraftHeads.modid, name = AbyssalCraftHeads.name, version = AbyssalCraftHeads.version, dependencies = "required-after:forge@[forgeversion,);required-after:abyssalcraft@[1.9.4.15,];after:thaumcraft", useMetadata = false,
 acceptedMinecraftVersions = "[1.12.2]", updateJSON = "https://raw.githubusercontent.com/Shinoow/AbyssalCraft-Heads/master/version.json", certificateFingerprint = "cert_fingerprint")
 public class AbyssalCraftHeads {
 
@@ -81,7 +81,7 @@ public class AbyssalCraftHeads {
 
 		head = new BlockHead();
 
-		GameRegistry.registerTileEntity(TileEntityHead.class, modid + ":head");
+		GameRegistry.registerTileEntity(TileEntityHead.class, new ResourceLocation(modid, "head"));
 
 	}
 

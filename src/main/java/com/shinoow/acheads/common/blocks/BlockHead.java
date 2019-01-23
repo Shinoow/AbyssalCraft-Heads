@@ -240,7 +240,7 @@ public class BlockHead extends Block implements IInfusionStabiliser {
 
 	@Override
 	public boolean canStabaliseInfusion(World world, BlockPos pos) {
-	
+
 		return true;
 	}
 }

@@ -10,6 +10,7 @@ import com.shinoow.acheads.common.blocks.tile.TileEntityHead;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.GlStateManager.DestFactor;
 import net.minecraft.client.renderer.GlStateManager.SourceFactor;
+import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.util.ResourceLocation;
 
@@ -248,6 +249,20 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 			GlStateManager.scale(1.5, 1.5, 1.5);
 			GlStateManager.translate(0, -0.5, 0);
 			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			bindTexture(SHOGGOTH_EYES);
+			GlStateManager.enableBlend();
+			GlStateManager.blendFunc(1, 1);
+			GlStateManager.depthMask(true);
+			int i = 61680;
+			int j = i % 65536;
+			int k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			j = i % 65536;
+			k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.disableBlend();
 		});
 		handlers.add((rotation, x, y, z, partialTicks, destroyStage) -> {
 			bindTexture(LESSER_ABYSSAL_SHOGGOTH);
@@ -255,6 +270,20 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 			GlStateManager.scale(1.5, 1.5, 1.5);
 			GlStateManager.translate(0, -0.5, 0);
 			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			bindTexture(ABYSSAL_EYES);
+			GlStateManager.enableBlend();
+			GlStateManager.blendFunc(1, 1);
+			GlStateManager.depthMask(true);
+			int i = 61680;
+			int j = i % 65536;
+			int k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			j = i % 65536;
+			k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.disableBlend();
 		});
 		handlers.add((rotation, x, y, z, partialTicks, destroyStage) -> {
 			bindTexture(LESSER_DREADED_SHOGGOTH);
@@ -262,6 +291,20 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 			GlStateManager.scale(1.5, 1.5, 1.5);
 			GlStateManager.translate(0, -0.5, 0);
 			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			bindTexture(DREADED_EYES);
+			GlStateManager.enableBlend();
+			GlStateManager.blendFunc(1, 1);
+			GlStateManager.depthMask(true);
+			int i = 61680;
+			int j = i % 65536;
+			int k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			j = i % 65536;
+			k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.disableBlend();
 		});
 		handlers.add((rotation, x, y, z, partialTicks, destroyStage) -> {
 			bindTexture(LESSER_OMOTHOL_SHOGGOTH);
@@ -269,6 +312,20 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 			GlStateManager.scale(1.5, 1.5, 1.5);
 			GlStateManager.translate(0, -0.5, 0);
 			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			bindTexture(OMOTHOL_EYES);
+			GlStateManager.enableBlend();
+			GlStateManager.blendFunc(1, 1);
+			GlStateManager.depthMask(true);
+			int i = 61680;
+			int j = i % 65536;
+			int k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			j = i % 65536;
+			k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.disableBlend();
 		});
 		handlers.add((rotation, x, y, z, partialTicks, destroyStage) -> {
 			bindTexture(LESSER_SHADOW_SHOGGOTH);
@@ -278,6 +335,18 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 			GlStateManager.enableBlend();
 			GlStateManager.blendFunc(SourceFactor.SRC_ALPHA, DestFactor.ONE_MINUS_SRC_ALPHA);
 			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			bindTexture(DARK_EYES);
+			GlStateManager.blendFunc(1, 1);
+			GlStateManager.depthMask(true);
+			int i = 61680;
+			int j = i % 65536;
+			int k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+			MODEL_LESSER_SHOGGOTH.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			j = i % 65536;
+			k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
 			GlStateManager.disableBlend();
 		});
 		handlers.add((rotation, x, y, z, partialTicks, destroyStage) -> {
@@ -394,6 +463,11 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 	private final ResourceLocation DEMON_SHEEP = new ResourceLocation("abyssalcraft:textures/model/demon_sheep.png");
 	private final ResourceLocation DEMON_SHEEP_FUR = new ResourceLocation("abyssalcraft:textures/model/demon_sheep_fur.png");
 	private final ResourceLocation CORALIUM_INFESTED_SQUID = new ResourceLocation("abyssalcraft:textures/model/coraliumsquid.png");
+	private final ResourceLocation SHOGGOTH_EYES = new ResourceLocation("abyssalcraft:textures/model/shoggoth/lessershoggoth_eyes.png");
+	private final ResourceLocation ABYSSAL_EYES = new ResourceLocation("abyssalcraft:textures/model/shoggoth/abyssalshoggoth_eyes.png");
+	private final ResourceLocation DREADED_EYES = new ResourceLocation("abyssalcraft:textures/model/shoggoth/dreadedshoggoth_eyes.png");
+	private final ResourceLocation OMOTHOL_EYES = new ResourceLocation("abyssalcraft:textures/model/shoggoth/omotholshoggoth_eyes.png");
+	private final ResourceLocation DARK_EYES = new ResourceLocation("abyssalcraft:textures/model/shoggoth/shadowshoggoth_eyes.png");
 
 	private ModelBipedHead MODEL_BIPED = new ModelBipedHead();
 	private ModelPigHead MODEL_PIG = new ModelPigHead();
