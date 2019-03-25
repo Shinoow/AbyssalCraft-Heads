@@ -209,6 +209,8 @@ public class AbyssalCraftHeads {
 			addLootEntry(event.getTable(), conditions, 49, "demon_sheep");
 		if(event.getName().equals(ACLoot.ENTITY_CORALIUM_INFESTED_SQUID))
 			addLootEntry(event.getTable(), conditions, 50, "coralium_infested_squid");
+		if(event.getName().equals(ACLoot.ENTITY_SHUB_OFFSPRING))
+			addLootEntry(event.getTable(), conditions, 52, "dark_offspring");
 	}
 
 	private void addLootEntry(LootTable table, LootCondition[] conditions, int meta, String name) {

@@ -393,6 +393,25 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 			GlStateManager.rotate(rotation * 90, 0, 1, 0);
 			MODEL_CHAGAROTH_FIST_LEFT.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
 		});
+		handlers.add((rotation, x, y, z, partialTicks, destroyStage) -> {
+			bindTexture(DARK_OFFSPRING);
+			GlStateManager.rotate(rotation * 90, 0, 1, 0);
+			MODEL_DARK_OFFSPRING.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			bindTexture(DARK_OFFSPRING_EYES);
+			GlStateManager.enableBlend();
+			GlStateManager.blendFunc(1, 1);
+			GlStateManager.depthMask(true);
+			int i = 61680;
+			int j = i % 65536;
+			int k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+			MODEL_DARK_OFFSPRING.render(null, 0, 0, -0.1F, 0, 0, 0.0625F);
+			j = i % 65536;
+			k = i / 65536;
+			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, j / 1.0F, k / 1.0F);
+			GlStateManager.disableBlend();
+		});
 	}
 
 	@Override
@@ -468,6 +487,8 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 	private final ResourceLocation DREADED_EYES = new ResourceLocation("abyssalcraft:textures/model/shoggoth/dreadedshoggoth_eyes.png");
 	private final ResourceLocation OMOTHOL_EYES = new ResourceLocation("abyssalcraft:textures/model/shoggoth/omotholshoggoth_eyes.png");
 	private final ResourceLocation DARK_EYES = new ResourceLocation("abyssalcraft:textures/model/shoggoth/shadowshoggoth_eyes.png");
+	private final ResourceLocation DARK_OFFSPRING = new ResourceLocation("abyssalcraft:textures/model/shub_offspring.png");
+	private final ResourceLocation DARK_OFFSPRING_EYES = new ResourceLocation("abyssalcraft:textures/model/shub_offspring_eyes.png");
 
 	private ModelBipedHead MODEL_BIPED = new ModelBipedHead();
 	private ModelPigHead MODEL_PIG = new ModelPigHead();
@@ -495,6 +516,7 @@ public class TileEntityHeadRenderer extends TileEntitySpecialRenderer<TileEntity
 	private ModelSheepHead MODEL_SHEEP = new ModelSheepHead();
 	private ModelSquidHead MODEL_SQUID = new ModelSquidHead();
 	private ModelChagarothFistHandLeft MODEL_CHAGAROTH_FIST_LEFT = new ModelChagarothFistHandLeft();
+	private ModelDarkOffspringHead MODEL_DARK_OFFSPRING = new ModelDarkOffspringHead();
 
 	private interface IRenderHandler {
 

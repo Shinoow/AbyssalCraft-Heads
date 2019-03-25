@@ -20,7 +20,7 @@ public class ItemACHead extends ItemBlock {
 			"antiplayer", "antiskeleton", "antispider", "antizombie", "omotholghoul", "remnant", "remnantbanker",
 			"remnantblacksmith", "remnantbutcher", "remnantlibrarian", "remnantmasterblacksmith", "remnantpriest",
 			"jzaharminion", "lessershoggoth", "abyssalshoggoth", "dreadedshoggoth", "omotholshoggoth", "shadowshoggoth",
-			"evilcow", "evilchicken", "demoncow", "demonchicken", "evilsheep", "demonsheep", "coraliumsquid", "chagarothfistleft"};
+			"evilcow", "evilchicken", "demoncow", "demonchicken", "evilsheep", "demonsheep", "coraliumsquid", "chagarothfistleft", "darkoffspring"};
 
 	public ItemACHead(Block block){
 		super(block);

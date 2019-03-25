@@ -2,6 +2,7 @@ package com.shinoow.acheads.common.blocks;
 
 import com.shinoow.acheads.AbyssalCraftHeads;
 import com.shinoow.acheads.common.blocks.tile.TileEntityHead;
+import com.shinoow.acheads.common.items.ItemACHead;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -25,7 +26,7 @@ import thaumcraft.api.crafting.IInfusionStabiliser;
 @Interface(modid = "thaumcraft", iface = "thaumcraft.api.crafting.IInfusionStabiliser", striprefs = true)
 public class BlockHead extends Block implements IInfusionStabiliser {
 
-	public static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 51);
+	public static final PropertyInteger TYPE = PropertyInteger.create("type", 0, ItemACHead.names.length-1);
 
 	public BlockHead() {
 		super(Material.CLOTH);
@@ -164,6 +165,8 @@ public class BlockHead extends Block implements IInfusionStabiliser {
 				return new AxisAlignedBB(0.12F, 0.0F, 0.12F, 0.88F, 1.0F, 0.88F);
 			case 51:
 				return new AxisAlignedBB(0.25F, 0.0F, 0.25F, 0.75F, 0.55F, 0.75F);
+			case 52:
+				return new AxisAlignedBB(0.25F, 0.0F, 0.25F, 0.75F, 1.0F, 0.75F);
 			}
 		return new AxisAlignedBB(0.1F, 0.0F, 0.1F, 0.8F, 0.7F, 0.8F);
 	}
