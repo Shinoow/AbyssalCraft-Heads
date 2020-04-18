@@ -159,7 +159,7 @@ task prepareFiles(type: Copy){
         include "src/main/**"
     into "$buildDir/rarTemp"
 
-    String filePath = "${project.findProperty("sourceDirACH")}/ACH source ${props.ac_version} (${props.mc_version}).rar"
+    String filePath = "${project.findProperty("sourceDirACH")}/ACH source ${props.ach_version} (${props.mc_version}).rar"
     String filePath1 = "${buildDir}/rarTemp/*"
 
     new File(projectDir, "generateRAR.bat").text = project.findProperty("rarCommand")+' "'+filePath+'" "'+filePath1+'"';
@@ -189,14 +189,12 @@ task buildAndDeploy(){
     dependsOn 'clean'
     dependsOn 'build'
     dependsOn 'curseforge'
-    dependsOn 'bintray'
     dependsOn 'copySrcJar'
     dependsOn 'copyJar'
     dependsOn 'prepareFiles'
     dependsOn 'generateRar'
     tasks.findByName('build').mustRunAfter 'clean'
     tasks.findByName('curseforge').mustRunAfter 'build'
-    tasks.findByName('bintray').mustRunAfter 'curseforge'
     tasks.findByName('prepareFiles').mustRunAfter 'build'
     tasks.findByName('generateRar').mustRunAfter 'prepareFiles'
     tasks.findByName('copySrcJar').mustRunAfter 'prepareFiles'
