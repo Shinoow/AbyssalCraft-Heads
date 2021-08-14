@@ -22,10 +22,14 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'com.matthewprenger.cursegradle'
 
 repositories {
-	maven {
-		name 'shinoow'
-		url 'https://dl.bintray.com/shinoow/maven/'
-	}
+	// maven {
+	// 	name 'shinoow'
+	// 	url 'https://dl.bintray.com/shinoow/maven/'
+	// }
+    maven {
+        name 'ModMaven'
+        url 'https://modmaven.dev'
+    }
 }
 
 ext.propFile = file "build.properties"
